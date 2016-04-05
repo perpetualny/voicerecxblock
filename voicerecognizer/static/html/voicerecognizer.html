@@ -1,0 +1,49 @@
+<div class="voice-recognizer">
+    <input type="hidden" name="lang" id="lang" value="{{self.lang}}">
+    <div class="notepad">
+        <div class="notepad-heading">
+          <h1>{{self.display_name}}</h1>
+        </div>
+        <div id="speech">
+          {% if self.mode == "assesment" %}
+              {% if self.attempts == self.max_attempts or  self.score == 1 %}
+                  <i>'Assesment completed!'</i><br><br>
+              {% else %}
+                  <i>'Please click on start and read following sentence. You have <b id="rem-attempts">{{self.attempts|get_remaining_attempts:self.max_attempts}}</b> attempts remaining.'</i><br>
+            {% endif %}
+
+            {{self.data}}<br><br>
+          {% else %}
+             <i>'Please click on start to recognize your voice.'</i><br><br>
+          {% endif %}
+          <span id="labnol" contenteditable="true">
+          </span>
+          <span id="notfinal"></span>
+          <span id="warning"></span>
+        </div>
+        <div class="whatisthis">
+          <span id="messages">
+            {% if self.attempts == self.max_attempts or  self.score == 1 %}
+
+                {% if self.score == 1 %}
+                    <i class="fa fa-check fa-2" style="margin-top: 6px;color:green;font-style: normal;"></i> &nbsp;You have spoken correct words.
+                {% else %}
+                    <i class="fa fa-times fa-2" style="margin-top: 6px;color:red;font-style: normal;"></i> &nbsp;You have spoken wrong words.
+                {% endif %}
+
+            {% else %}
+
+                {% if self.mode == "assesment" %}
+                    <a href="javascript:void(0);"id="start-vsr-assesment">Start</a>
+                    <a href="javascript:void(0);" class="btn-vsr" id="submit-vsr" style="display:none;">Submit</a>
+                {% else %}
+                    <a href="javascript:void(0);"id="start-vsr">Start</a>
+                    <a href="javascript:void(0);" class="btn-vsr" id="stop-vsr" style="display:none;">Stop</a>
+                {% endif %}
+                <a href="javascript:void(0);" id="clare-vsr">Clear</a>
+                <span class="spin svr-status"><i class="icon fa fa-volume-up"></i></span>
+            {% endif %}
+          </span>
+        </div>
+      </div>
+</div>

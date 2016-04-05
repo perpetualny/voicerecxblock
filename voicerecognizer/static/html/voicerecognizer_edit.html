@@ -1,0 +1,131 @@
+<div class="voice-recognizer-edit">
+    <input type="hidden" id="h-lang" value="{{self.lang}}">
+    <input type="hidden" id="h-mode" value="{{self.mode}}">
+    <ul class="list-input settings-list">
+        <li class="field comp-setting-entry metadata_entry">
+            <div class="wrapper-comp-setting">
+                <label class="label setting-label" for="display_name">Change Display Name</label>
+                <input class="input setting-input" id="display_name" value="{{self.display_name}}" type="text">
+            </div>
+            <span class="tip setting-help">The name students see. This name appears in the course ribbon and as a header for the Voice Recognizer XBlock.</span>
+        </li>
+        <li class="field comp-setting-entry metadata_entry">
+            <div class="wrapper-comp-setting">
+                <label class="label setting-label" for="select_tb_type">Recognizer Language</label>
+                    <span class="language">
+                          <select name="lang" id="lang">
+                            <option value="af-ZA">{{'Afrikaans'|encode_utf}}</option>
+                            <option value="id-ID">{{'Bahasa Indonesia'|encode_utf}}</option>
+                            <option value="ms-MY">{{'Bahasa Melayu'|encode_utf}}</option>
+                            <option value="ca-ES">{{'Català'|encode_utf}}</option>
+                            <option value="cs-CZ">{{'Čeština'|encode_utf}}</option>
+                            <option value="da-DK">{{'Dansk'|encode_utf}}</option>
+                            <option value="de-DE">{{'Deutsch'|encode_utf}}</option>
+                            <optgroup label="English">
+                              <option value="en-AU">{{'Australia'|encode_utf}}</option>
+                              <option value="en-CA">{{'Canada'|encode_utf}}</option>
+                              <option value="en-IN">{{'India'|encode_utf}}</option>
+                              <option value="en-NZ">{{'New Zealand'|encode_utf}}</option>
+                              <option value="en-ZA">{{'South Africa'|encode_utf}}</option>
+                              <option value="en-GB">{{'United Kingdom'|encode_utf}}</option>
+                              <option value="en-US" selected>{{'United States'|encode_utf}}</option>
+                            </optgroup>
+                            <optgroup label="{{'Español'|encode_utf}}">
+                              <option value="es-AR">{{'Argentina'|encode_utf}}</option>
+                              <option value="es-BO">{{'Bolivia'|encode_utf}}</option>
+                              <option value="es-CL">{{'Chile'|encode_utf}}</option>
+                              <option value="es-CO">{{'Colombia'|encode_utf}}</option>
+                              <option value="es-CR">{{'Costa Rica'|encode_utf}}</option>
+                              <option value="es-EC">{{'Ecuador'|encode_utf}}</option>
+                              <option value="es-SV">{{'El Salvador'|encode_utf}}</option>
+                              <option value="es-ES">{{'España'|encode_utf}}</option>
+                              <option value="es-US">{{'Estados Unidos'|encode_utf}}</option>
+                              <option value="es-GT">{{'Guatemala'|encode_utf}}</option>
+                              <option value="es-HN">{{'Honduras'|encode_utf}}</option>
+                              <option value="es-MX">{{'México'|encode_utf}}</option>
+                              <option value="es-NI">{{'Nicaragua'|encode_utf}}</option>
+                              <option value="es-PA">{{'Panamá'|encode_utf}}</option>
+                              <option value="es-PY">{{'Paraguay'|encode_utf}}</option>
+                              <option value="es-PE">{{'Perú'|encode_utf}}</option>
+                              <option value="es-PR">{{'Puerto Rico'|encode_utf}}</option>
+                              <option value="es-DO">{{'República Dominicana'|encode_utf}}</option>
+                              <option value="es-UY">{{'Uruguay'|encode_utf}}</option>
+                              <option value="es-VE">{{'Venezuela'|encode_utf}}</option>
+                            </optgroup>
+                            <option value="eu-ES">{{'Euskara'|encode_utf}}</option>
+                            <option value="fil-PH">{{'Filipino'|encode_utf}}</option>
+                            <option value="fr-FR">{{'Français'|encode_utf}}</option>
+                            <option value="gl-ES">{{'Galego'|encode_utf}}</option>
+                            <option value="hi-IN">{{'हिन्दी'|encode_utf}}</option>
+                            <option value="hr_HR">{{'Hrvatski'|encode_utf}}</option>
+                            <option value="zu-ZA">{{'IsiZulu'|encode_utf}}</option>
+                            <option value="is-IS">{{'Íslenska'|encode_utf}}</option>
+                            <optgroup label="{{'Italiano'|encode_utf}}">
+                              <option value="it-IT">{{'Italia'|encode_utf}}</option>
+                              <option value="it-CH">{{'Svizzera'|encode_utf}}</option>
+                            </optgroup>
+                            <option value="lt-LT">{{'Lietuvių'|encode_utf}}</option>
+                            <option value="hu-HU">{{'Magyar'|encode_utf}}</option>
+                            <option value="nl-NL">{{'Nederlands'|encode_utf}}</option>
+                            <option value="nb-NO">{{'Norsk bokmål'|encode_utf}}</option>
+                            <option value="pl-PL">{{'Polski'|encode_utf}}</option>
+                            <optgroup label="{{'Português'|encode_utf}}">
+                              <option value="pt-BR">{{'Brasil'|encode_utf}}</option>
+                              <option value="pt-PT">{{'Portugal'|encode_utf}}</option>
+                            </optgroup>
+                            <option value="ro-RO">{{'Română'|encode_utf}}</option>
+                            <option value="sl-SI">{{'Slovenščina'|encode_utf}}</option>
+                            <option value="sk-SK">{{'Slovenčina'|encode_utf}}</option>
+                            <option value="fi-FI">{{'Suomi'|encode_utf}}</option>
+                            <option value="sv-SE">{{'Svenska'|encode_utf}}</option>
+                            <option value="vi-VN">{{'Tiếng Việt'|encode_utf}}</option>
+                            <option value="th-TH">{{'ภาษาไทย'|encode_utf}}</option>
+                            <option value="tr-TR">{{'Türkçe'|encode_utf}}</option>
+                            <option value="el-GR">{{'Ελληνικά'|encode_utf}}</option>
+                            <option value="bg-BG">{{'български'|encode_utf}}</option>
+                            <option value="ru-RU">{{'Pусский'|encode_utf}}</option>
+                            <option value="sr-RS">{{'Српски'|encode_utf}}</option>
+                            <option value="uk-UA">{{'Українська'|encode_utf}}</option>
+                            <option value="ko-KR">{{'한국어'|encode_utf}}</option>
+                            <optgroup label="中文">
+                              <option value="cmn-Hans-CN">{{'普通话 (中国大陆)'|encode_utf}}</option>
+                              <option value="cmn-Hans-HK">{{'普通话 (香港)'|encode_utf}}</option>
+                              <option value="cmn-Hant-TW">{{'中文 (台灣)'|encode_utf}}</option>
+                              <option value="yue-Hant-HK">{{'粵語 (香港)'|encode_utf}}</option>
+                            </optgroup>
+                            <option value="ja-JP">{{'日本語'|encode_utf}}</option>
+                          </select>
+            <span class="tip setting-help">Select a recognizer language.</span>
+        </li>
+        <li class="field comp-setting-entry metadata_entry">
+            <div class="wrapper-comp-setting">
+                <label class="label setting-label" for="mode">Mode</label>
+                <select name="mode" id="mode">
+                    <option value="standard">Standard</option>
+                    <option value="assesment">Assesment</option>
+                </select>
+            </div>
+        </li>
+        <li class="field comp-setting-entry metadata_entry mode-data" style="display:none;">
+            <div class="wrapper-comp-setting">
+                <label class="label setting-label" for="rsv-data">Data</label>
+                <textarea class="input setting-input" id="rsv-data" style="width: 376px; height: 93px;">{{self.data}}</textarea>
+                <span class="tip setting-help">Please add text for assesment.</span>
+            </div>
+        </li>
+        <li class="field comp-setting-entry metadata_entry mode-data" style="display:none;">
+            <div class="wrapper-comp-setting">
+                <label class="label setting-label" for="rsv-waight">Waight</label>
+                <input class="input setting-input" id="rsv-waight" value="{{self.weight}}" type="text">
+                <span class="tip setting-help">Please add waight for assesment.</span>
+            </div>
+        </li>
+        <li class="field comp-setting-entry metadata_entry mode-data" style="display:none;">
+            <div class="wrapper-comp-setting">
+                <label class="label setting-label" for="max-attempts">Max Attempts</label>
+                <input class="input setting-input" id="max-attempts" value="{{self.max_attempts}}" type="text">
+                <span class="tip setting-help">Please add maximum attempts for assesment.</span>
+            </div>
+        </li>
+    </ul>
+</div>
