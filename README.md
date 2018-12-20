@@ -1,5 +1,5 @@
 # Voice Recognizer XBlock #
-This XBlock allows students to recognize his voice and he can see the what he spoke.
+This XBlock allows a student to recognize his or her voice and see what he or she spoke.
 It supports multiple languages, this version worksonly on Google Chrome Browser.
 
 ## Installation instructions ##
